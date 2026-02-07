@@ -17,4 +17,7 @@ public class AppProperties {
   private String url_redirect;
   private Long jwt_exp;
   private String cors_origin;
+  private String name;
+  private String version;
+  private String description;
 }

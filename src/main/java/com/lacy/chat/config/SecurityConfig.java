@@ -55,7 +55,7 @@ public class SecurityConfig {
             auth ->
                 auth
                     // Public paths
-                    .requestMatchers("/", "/oauth2/**", "/login/**", "/h2-console/**")
+                    .requestMatchers("/", "/oauth2/**", "/login/**", "/h2-console/**","/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html")
                     .permitAll()
                     // API endpoints require authentication
                     .requestMatchers("/api/**")

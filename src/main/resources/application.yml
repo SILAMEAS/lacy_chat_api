@@ -1,11 +1,13 @@
-application:
-  name : "chat application"
+
 
 app:
   jwt_secret: ${TOKEN_SECRET}
   jwt_exp: ${TOKEN_EXP}
   url_redirect: ${BASE_URL}/oauth2/success?token=
   cors_origin: ${BASE_URL}
+  name: "@project.name@"
+  version: "@project.version@"
+  description: "@project.description@"
 spring:
   security:
     oauth2:
@@ -18,8 +20,6 @@ spring:
               - email
               - profile
 
-
-
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}
@@ -29,11 +29,14 @@ spring:
   jpa:
     database-platform: ${JPA_DIALECT:org.hibernate.dialect.MySQLDialect}
     hibernate:
-      ddl-auto: ${DDL_AUTO:update}
     properties:
       hibernate:
         show_sql: ${SHOW_SQL:false}
         format_sql: ${FORMAT_SQL:false}
 
 
-
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
