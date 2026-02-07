@@ -11,35 +11,34 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CustomOAuth2UserService
-        implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
+public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
 
-    private final UserRepository userRepository;
+  private final UserRepository userRepository;
 
-    public CustomOAuth2UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+  public CustomOAuth2UserService(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
 
-    @Override
-    public OAuth2User loadUser(OAuth2UserRequest request)
-            throws OAuth2AuthenticationException {
+  @Override
+  public OAuth2User loadUser(OAuth2UserRequest request) throws OAuth2AuthenticationException {
 
-        OAuth2User oauthUser =
-                new DefaultOAuth2UserService().loadUser(request);
+    OAuth2User oauthUser = new DefaultOAuth2UserService().loadUser(request);
 
-        String email = oauthUser.getAttribute("email");
+    String email = oauthUser.getAttribute("email");
 
-        userRepository.findByEmail(email)
-                .orElseGet(() -> {
-                    User u = new User();
-                    u.setEmail(email);
-                    u.setName(oauthUser.getAttribute("name"));
-                    u.setPicture(oauthUser.getAttribute("picture"));
-                    u.setProvider(Provider.GOOGLE.toString());
-                    u.setProviderId(oauthUser.getAttribute("sub"));
-                    return userRepository.save(u);
-                });
+    userRepository
+        .findByEmail(email)
+        .orElseGet(
+            () -> {
+              User u = new User();
+              u.setEmail(email);
+              u.setName(oauthUser.getAttribute("name"));
+              u.setPicture(oauthUser.getAttribute("picture"));
+              u.setProvider(Provider.GOOGLE.toString());
+              u.setProviderId(oauthUser.getAttribute("sub"));
+              return userRepository.save(u);
+            });
 
-        return oauthUser;
-    }
+    return oauthUser;
+  }
 }

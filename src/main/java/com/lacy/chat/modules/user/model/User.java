@@ -1,6 +1,6 @@
 package com.lacy.chat.modules.user.model;
 
-import com.lacy.chat.config.core.base.AbstractAuditable;
+import com.lacy.chat.share.core.base.AbstractAuditable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

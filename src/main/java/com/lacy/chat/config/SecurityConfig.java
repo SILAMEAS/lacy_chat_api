@@ -1,5 +1,6 @@
 package com.lacy.chat.config;
 
+import com.lacy.chat.config.jwt.JwtAuthenticationFilter;
 import com.lacy.chat.modules.user.service.CustomOAuth2UserService;
 import java.util.List;
 

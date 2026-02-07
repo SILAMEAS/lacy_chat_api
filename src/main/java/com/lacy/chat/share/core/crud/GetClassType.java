@@ -1,4 +1,4 @@
-package com.lacy.chat.config.core.crud;
+package com.lacy.chat.share.core.crud;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

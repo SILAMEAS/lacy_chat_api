@@ -1,11 +1,11 @@
 package com.lacy.chat.modules.user.service;
 
-import com.lacy.chat.config.core.crud.AbstractCrudCommon;
+import com.lacy.chat.share.core.crud.AbstractCrudCommon;
 import com.lacy.chat.modules.user.dto.res.UserResponse;
 import com.lacy.chat.modules.user.model.User;
 import com.lacy.chat.modules.user.model.UserMapper;
 import com.lacy.chat.modules.user.repository.UserRepository;
-import com.lacy.chat.share.exception.NotFoundException;
+import com.lacy.chat.share.core.exception.NotFoundException;
 import org.springframework.stereotype.Service;
 
 

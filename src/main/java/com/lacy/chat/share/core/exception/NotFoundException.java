@@ -1,4 +1,4 @@
-package com.lacy.chat.share.exception;
+package com.lacy.chat.share.core.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

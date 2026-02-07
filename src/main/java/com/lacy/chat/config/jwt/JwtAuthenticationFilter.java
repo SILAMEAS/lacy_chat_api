@@ -1,4 +1,4 @@
-package com.lacy.chat.config;
+package com.lacy.chat.config.jwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

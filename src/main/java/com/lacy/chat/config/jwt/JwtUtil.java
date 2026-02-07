@@ -1,5 +1,6 @@
-package com.lacy.chat.config;
+package com.lacy.chat.config.jwt;
 
+import com.lacy.chat.config.AppProperties;
 import com.lacy.chat.modules.user.model.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

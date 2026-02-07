@@ -1,4 +1,4 @@
-package com.lacy.chat.config.core.base;
+package com.lacy.chat.share.core.base;
 
 public interface PreOperationInterface {
     void onPreCreated();

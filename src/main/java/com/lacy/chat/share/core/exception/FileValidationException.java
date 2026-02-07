@@ -1,4 +1,4 @@
-package com.lacy.chat.share.exception;
+package com.lacy.chat.share.core.exception;
 
 public class FileValidationException extends RuntimeException {
     public FileValidationException(String message) {

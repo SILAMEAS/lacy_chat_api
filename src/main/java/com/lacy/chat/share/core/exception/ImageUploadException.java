@@ -1,4 +1,4 @@
-package com.lacy.chat.share.exception;
+package com.lacy.chat.share.core.exception;
 
 
 public class ImageUploadException extends RuntimeException {

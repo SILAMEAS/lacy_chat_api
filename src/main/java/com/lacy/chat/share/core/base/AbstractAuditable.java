@@ -1,4 +1,4 @@
-package com.lacy.chat.config.core.base;
+package com.lacy.chat.share.core.base;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

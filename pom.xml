@@ -10,8 +10,8 @@
     </parent>
     <groupId>com.lacy</groupId>
     <artifactId>chat</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>chat</name>
+    <version>0.0.1</version>
+    <name>chat lacy application</name>
     <description>chat for communication</description>
     <url/>
     <licenses>
@@ -31,6 +31,7 @@
         <jwt.version>0.11.5</jwt.version>
         <mapstruct.version>1.6.3</mapstruct.version>
         <lombok.version>1.18.42</lombok.version>
+        <springdoc.verions>2.8.5</springdoc.verions>
     </properties>
     <dependencies>
         <!--		JWT -->
@@ -96,7 +97,8 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.8.5</version> </dependency>
+            <version>${springdoc.verions}</version>
+        </dependency>
     </dependencies>
 
     <build>

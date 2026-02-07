@@ -1,4 +1,4 @@
-package com.lacy.chat.share.exception;
+package com.lacy.chat.share.core.exception;
 
 
 import com.lacy.chat.share.dto.res.ExceptionResponse;

@@ -1,7 +1,7 @@
-package com.lacy.chat.config.core.crud;
+package com.lacy.chat.share.core.crud;
 
 
-import com.lacy.chat.share.exception.NotFoundException;
+import com.lacy.chat.share.core.exception.NotFoundException;
 import lombok.NonNull;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

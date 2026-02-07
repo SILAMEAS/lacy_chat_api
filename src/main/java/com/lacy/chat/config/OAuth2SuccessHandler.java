@@ -1,5 +1,6 @@
 package com.lacy.chat.config;
 
+import com.lacy.chat.config.jwt.JwtUtil;
 import com.lacy.chat.modules.user.model.User;
 import com.lacy.chat.modules.user.repository.UserRepository;
 import jakarta.servlet.http.Cookie;
